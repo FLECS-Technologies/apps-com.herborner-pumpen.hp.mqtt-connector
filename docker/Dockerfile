@@ -2,7 +2,7 @@ ARG ARCH
 ARG VERSION
 ARG VARIANT
 
-FROM scratch:${VERSION}
+FROM public.ecr.aws/v7c5l1w8/snow-leopard/hp-mqtt-connector:${VERSION}
 
 ARG ARCH
 ARG VERSION
