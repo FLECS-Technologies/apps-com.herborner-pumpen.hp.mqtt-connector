@@ -1,6 +1,7 @@
 {
-    "$schema": "https://raw.githubusercontent.com/FLECS-Technologies/app-sdk/3.0.0/manifest.schema.json",
-    "_schemaVersion": "3.0.0",
+    "$schema": "https://git.flecs.tech/flecs/app-manifest/raw/branch/3.3.0/manifest.schema.json",
+    "_schemaVersion": "3.3.0",
+    "_minimumFlecsVersion": "5.6.0",
     "app": "com.herborner-pumpen.hp.mqtt-connector",
     "version": "##VERSION##",
     "revision": "0",
@@ -12,10 +13,23 @@
         "8883:8883"
     ],
     "env":[
-        "LOGLEVEL=notice",
-        "FLECS_API_ADDRESS=172.21.0.1:8081"
+        "LOGLEVEL=notice"
     ],
     "volumes":[
         "data:/app/data"
-    ]
+    ],
+    "permissions": {
+        "api": {
+            "authMethod": "certificate",
+            "roles": [
+                { "roleId": "tech.flecs.core.get_apps" },
+                { "roleId": "tech.flecs.core.read_instances" },
+                { "roleId": "tech.flecs.core.read_instance" },
+                { "roleId": "tech.flecs.core.read_system_info" },
+                { "roleId": "tech.flecs.core.read_version" },
+                { "roleId": "tech.flecs.core.read_license_info" },
+                { "roleId": "tech.flecs.core.read_network_adapters" }
+            ]
+        }
+    }
 }
