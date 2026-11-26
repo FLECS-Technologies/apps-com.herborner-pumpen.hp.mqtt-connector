@@ -1,7 +1,6 @@
 {
     "$schema": "https://git.flecs.tech/flecs/app-manifest/raw/branch/3.3.0/manifest.schema.json",
     "_schemaVersion": "3.3.0",
-    "_minimumFlecsVersion": "5.6.0",
     "app": "com.herborner-pumpen.hp.mqtt-connector",
     "version": "##VERSION##",
     "revision": "0",
