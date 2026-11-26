@@ -17,18 +17,18 @@
     "volumes":[
         "data:/app/data"
     ],
+    "credential": {
+        "type": "certificate"
+    },
     "permissions": {
         "api": {
-            "authMethod": "certificate",
-            "roles": [
-                { "roleId": "tech.flecs.core.get_apps" },
-                { "roleId": "tech.flecs.core.read_instances" },
-                { "roleId": "tech.flecs.core.read_instance" },
-                { "roleId": "tech.flecs.core.read_system_info" },
-                { "roleId": "tech.flecs.core.read_version" },
-                { "roleId": "tech.flecs.core.read_license_info" },
-                { "roleId": "tech.flecs.core.read_network_adapters" }
-            ]
+            "tech.flecs.core": {
+                "read_apps": {},
+                "read_instances": {},
+                "read_system_info": {},
+                "read_license_info": {},
+                "read_network_adapters": {}
+            }
         }
     }
 }
